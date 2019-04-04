@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>AJAX 網路連線基本操作</title>
+    </head>
+    <body>
+        <h1>AJAX 網路連線基本操作</h1>
+        <div id="list"></div>
+        <script>
+        //先顯示Loading的訊息
+        let list=document.getElementByID("list");
+        list.innerHTML="...Loading...";
+        //透過AJAX fetch API 連線到遠端的網址，抓取資料
+        /*
+            fetch(網址).then(function(response){
+                //Response 物件，代表伺服器的回應
+            })
+        */
+        let src"https://tsengmenghau.github.io/web/README.md";
+        fetch(src).then(function(response){
+            console.log(response);
+        })
+        </script>
+    </body>
+</html>
